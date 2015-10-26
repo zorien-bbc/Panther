@@ -12,11 +12,11 @@ public class Rennen {
     private double zurueckzulegenderWeg;
 
     public Rennen(String name, int anzTeilnehmer, Vector<Panther> panthers,
-            double zurueckgelegterWeg) {
+            double zurueckzulegenderWeg) {
         this.name = name;
         this.anzTeilnehmer = anzTeilnehmer;
         this.panthers = panthers;
-        this.zurueckzulegenderWeg = zurueckgelegterWeg;
+        this.zurueckzulegenderWeg = zurueckzulegenderWeg;
     }
 
     public void addPanther(Panther panther) {
