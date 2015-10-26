@@ -4,15 +4,19 @@ import java.util.Random;
 
 /**
  * 
- * @author Oliver Aschwanden, Miguel Gomes, Nils Oriet
+ * @author Miguel Gomes, Nils Oriet, Oliver Aschwanden
  *
  */
 public class Panther {
+	
+	//Dekleration der Variablen
     private String name;
     private String rasse;
     private double maxSpeed;
     private double zurueckgelegterWeg;
 
+    
+    // Konstruktor
     public Panther(String name) {
         this.name = name;
         this.rasse = "Panther";
@@ -47,6 +51,8 @@ public class Panther {
                 + maxSpeed + ", zurueckgelegterWeg=" + zurueckgelegterWeg + "]";
     }
 
+    
+    // Getter und Setter
     public double getZurueckgelegterWeg() {
         return zurueckgelegterWeg;
     }
