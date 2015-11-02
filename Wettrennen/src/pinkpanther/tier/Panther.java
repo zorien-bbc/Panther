@@ -8,69 +8,68 @@ import java.util.Random;
  *
  */
 public class Panther {
-	
-	//Dekleration der Variablen
-    private String name;
-    private String rasse;
-    private double maxSpeed;
-    private double zurueckgelegterWeg;
 
-    
-    // Konstruktor
-    public Panther(String name) {
-        this.name = name;
-        this.rasse = "Panther";
-        this.maxSpeed = 16.7;
-        this.zurueckgelegterWeg = 0;
-    }
+	// Dekleration der Variablen
+	private String name;
+	private String rasse;
+	private double maxSpeed;
+	private double zurueckgelegterWeg;
 
-    /**
-     * Generiert eine zufällige Zahl zwischen 0 und der Maximalen
-     * Geschwindigkeit
-     * 
-     * @return randomValue
-     */
-    public double generateRandom() {
-        Random r = new Random();
-        double randomValue = 10 + (this.getMaxSpeed() - 0) * r.nextDouble();
-        randomValue = Math.round(randomValue);
-        return randomValue;
-    }
+	// Konstruktor
+	public Panther(String name) {
+		this.name = name;
+		this.rasse = "Panther";
+		this.maxSpeed = 16.7;
+		this.zurueckgelegterWeg = 0;
+	}
 
-    /**
-     * Lässt Tier bewegen
-     */
-    public void bewege() {
-        this.setZurueckgelegterWeg(this.getZurueckgelegterWeg()
-                + generateRandom());
-    }
+	/**
+	 * Generiert eine zufällige Zahl zwischen 0 und der Maximalen
+	 * Geschwindigkeit
+	 * 
+	 * @return randomValue
+	 */
+	public double generateRandom() {
+		Random r = new Random();
+		double randomValue = 10 + (this.getMaxSpeed() - 0) * r.nextDouble();
+		randomValue = Math.round(randomValue);
+		return randomValue;
+	}
 
-    @Override
-    public String toString() {
-        return "Panther [name=" + name + ", rasse=" + rasse + ", maxSpeed="
-                + maxSpeed + ", zurueckgelegterWeg=" + zurueckgelegterWeg + "]";
-    }
+	/**
+	 * Lässt Tier bewegen
+	 */
+	public void bewege() {
+		this.setZurueckgelegterWeg(this.getZurueckgelegterWeg()
+				+ generateRandom());
+	}
 
-    
-    // Getter und Setter
-    public double getZurueckgelegterWeg() {
-        return zurueckgelegterWeg;
-    }
+	@Override
+	public String toString() {
+		return "\n\t"+name + "\n\tRasse: " + rasse
+				+ "\n \tMax. Geschwindigkeit: " + maxSpeed
+				+ "\n \tZurueckgelegter Weg: " + zurueckgelegterWeg+"\n";
+	}
 
-    public void setZurueckgelegterWeg(double zurueckgelegterWeg) {
-        this.zurueckgelegterWeg = zurueckgelegterWeg;
-    }
+	// Getter und Setter
+	public double getZurueckgelegterWeg() {
+		return zurueckgelegterWeg;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setZurueckgelegterWeg(double zurueckgelegterWeg) {
+		this.zurueckgelegterWeg = zurueckgelegterWeg;
+	}
 
-    public String getRasse() {
-        return rasse;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public double getMaxSpeed() {
-        return maxSpeed;
-    }
+	public String getRasse() {
+		return rasse;
+	}
+
+	public double getMaxSpeed() {
+		return maxSpeed;
+	}
 
 }

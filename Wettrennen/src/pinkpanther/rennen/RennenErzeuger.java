@@ -6,18 +6,21 @@ import pinkpanther.tier.Panther;
 
 public class RennenErzeuger {
 
-    public static void main(String[] args) {
-        String[] pantherName = { "Pink Panther", "Red Panther", "Blue Panther",
-                "Black Panther" };
-        Rennen rennen = new Rennen("Cooles Rennen", 4, new Vector<Panther>(),
-                1000);
-        for (int i = 0; i < rennen.getAnzTeilnehmer(); i++) {
-            rennen.addPanther(new Panther(pantherName[i]));
-        }
-        rennen.durchfuehren(rennen);
-        for (Panther p : rennen.getPanthers()) {
-            System.out.println(p.toString());
-        }
-    }
+	public static void main(String[] args) {
+		Vector<String> pantherName = new Vector<String>();
+		pantherName.add("Black Panther");
+		pantherName.add("Pink Panther");
+		pantherName.add("Blue Panther");
+		pantherName.add("Red Panther");
+		Rennen rennen = new Rennen("Cooles Rennen", 4, new Vector<Panther>(),
+				1000);
+		for (int i = 0; i < rennen.getAnzTeilnehmer(); i++) {
+			rennen.addPanther(new Panther(pantherName.get(i)));
+		}
+		rennen.durchfuehren(rennen);
+		System.out.println(rennen.toString().replace(',', ' ')
+				.replace('[', ' ').replace(']', ' '));
+
+	}
 
 }
